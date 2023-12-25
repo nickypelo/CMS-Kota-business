@@ -13,9 +13,9 @@ const navList: nav[] = [
 
 ]
 
-import icon from '../../public/settings.png';
+import image from '../assets/settings.png';
 
-const myImage: string = icon;
+const myImage: ImageMetadata = image;
 ---
 <nav class="bg-yellow-500 text-xl">
     <ul class="hidden md:flex justify-around max-w-[1024px] m-auto p-2">
@@ -25,6 +25,6 @@ const myImage: string = icon;
     </ul>
 
     <div class="md:hidden p-2">
-        <img src={myImage} alt="eish">
+        <img src={myImage.src} alt="Menu" width="20" height="20">
     </div>
 </nav>

@@ -12,8 +12,8 @@ import Navigation from '../components/navBar.astro'
 		<title>Astro</title>
 	</head>
 	<body>
-		<header>
-			<div class="hidden md:block bg-black text-white">
+		<header class="h-20v">
+			<div class="hidden md:block bg-black text-white ">
 				<section class="justify-between p-2 flex m-auto max-w-[1024px]">
 					<div><p>LeviMakhiha@business.com</p></div>
 					<article>Profile</article>
@@ -23,6 +23,8 @@ import Navigation from '../components/navBar.astro'
 			
 		</header>
 		
-        <slot/>
+        <main class="min-h-80v ">
+			<slot/>
+		</main>
 	</body>
 </html>
