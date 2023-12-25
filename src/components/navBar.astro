@@ -1,0 +1,30 @@
+---
+type nav = {
+    name: string,
+    link: string
+}
+
+const navList: nav[] = [
+    {name: 'Home', link: '/'},
+    {name: 'Menu', link: '/menu'},
+    {name: 'Our Story', link: '/about'},
+    {name: 'Contact', link: '/contact'},
+    // {name: 'Home', link: '/'}
+
+]
+
+import icon from '../../public/settings.png';
+
+const myImage: string = icon;
+---
+<nav class="bg-yellow-500 text-xl">
+    <ul class="hidden md:flex justify-around max-w-[1024px] m-auto p-2">
+        {navList.map(item =>
+            <li class="active:text-red-600"><a href={item.link}>{item.name}</a></li>
+        )}
+    </ul>
+
+    <div class="md:hidden p-2">
+        <img src={myImage} alt="eish">
+    </div>
+</nav>

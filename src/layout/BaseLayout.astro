@@ -1,0 +1,28 @@
+---
+const lebitso:string = 'Nicholas';
+import Navigation from '../components/navBar.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<header>
+			<div class="hidden md:block bg-black text-white">
+				<section class="justify-between p-2 flex m-auto max-w-[1024px]">
+					<div><p>LeviMakhiha@business.com</p></div>
+					<article>Profile</article>
+				</section>
+			</div>
+			<Navigation/>
+			
+		</header>
+		
+        <slot/>
+	</body>
+</html>
