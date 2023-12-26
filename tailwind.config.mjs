@@ -12,7 +12,11 @@ export default {
 			},
 			maxWidth:{
 				'contact': '450px'
+			},
+			width:{
+				'adjust': '400px'
 			}
+
 		},
 	},
 	plugins: [],
