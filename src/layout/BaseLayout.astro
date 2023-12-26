@@ -1,6 +1,7 @@
 ---
 const lebitso:string = 'Nicholas';
-import Navigation from '../components/navBar.astro'
+import Navigation from '../components/navBar.astro';
+import Footer from '../components/footer.astro';
 ---
 
 <html lang="en">
@@ -26,5 +27,6 @@ import Navigation from '../components/navBar.astro'
         <main class="min-h-80v ">
 			<slot/>
 		</main>
+		<Footer/>
 	</body>
 </html>

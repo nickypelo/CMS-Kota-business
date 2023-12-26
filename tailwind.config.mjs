@@ -9,6 +9,9 @@ export default {
 			},
 			minHeight:{
 				'80v': '80vh'
+			},
+			maxWidth:{
+				'contact': '450px'
 			}
 		},
 	},

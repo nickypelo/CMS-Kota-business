@@ -14,6 +14,7 @@ const navList: nav[] = [
 ]
 
 import image from '../assets/settings.png';
+import { Image } from 'astro:assets';
 
 const myImage: ImageMetadata = image;
 ---
@@ -25,6 +26,6 @@ const myImage: ImageMetadata = image;
     </ul>
 
     <div class="md:hidden p-2">
-        <img src={myImage.src} alt="Menu" width="20" height="20">
+        <button><Image alt='' src={image} format='avif' width="20" height="20"/></button>
     </div>
 </nav>
