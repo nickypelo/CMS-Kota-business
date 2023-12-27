@@ -1,0 +1,51 @@
+---
+
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotalicious | dashboard</title>
+    <base href="/angular">
+</head>
+<body>
+    <div class="flex ">
+        <aside class="w-72 min-h-screen border-r-2 px-4">
+            <section class="border-b-2 p-4">
+                <div class="bg-black w-12 h-12 m-auto"></div>
+            </section>
+
+            <section class="p-4">
+                <nav class="p-4">
+                    <ul class="">
+                        <li class="pb-1 pl-2 mb-2 border-b-2"><a href="/">Sales</a></li>
+                        <li class="pb-1 pl-2 mb-2 border-b-2"><a href="/">Products</a></li>
+                        <li class="pb-1 pl-2 mb-2 border-b-2"><a href="/">Ingredients</a></li>
+                        <li class="pb-1 pl-2 mb-2 border-b-2"><a href="/">Website</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </aside>
+
+        <div class="w-full">
+            <header class=" flex justify-between p-4 border-b-2 text-sm">
+                <figure class="flex">
+                    <div class="bg-black w-12 h-12 m-auto text-sm"></div>
+                    <figcaption>
+                        <p>Owner</p>
+                        <p>Entrepreneur</p>
+                    </figcaption>
+                </figure>
+                <div class="bg-black w-12 h-12 m-auto"></div>
+            </header>
+
+            <main class="p-4">
+                <slot/>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
