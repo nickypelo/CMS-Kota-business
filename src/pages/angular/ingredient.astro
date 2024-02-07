@@ -1,0 +1,10 @@
+---
+import DashboardLayout from "../../layout/DashboardLayout.astro";
+import {IngredientComponent} from "../../components/angular/ingredient/ingredient.component";
+---
+
+<DashboardLayout>
+    <section>
+        <IngredientComponent client:load/>
+    </section>
+</DashboardLayout>
