@@ -1,0 +1,27 @@
+{
+  "menu": [
+    {
+      "id": "4b5c81ce-83b3-427f-9b9f-9f98c141b60f",
+      "prodName": "Monate Mpolaye",
+      "prodIngredients": "Russian, Burger, Chips, Atchaar",
+      "prodImage": "picture",
+      "prodPrice": "115"
+    },
+    {
+      "id": "41e9fd99-76e2-43d1-90d3-ae2b87770b6e",
+      "prodName": "Lovie Wam",
+      "prodIngredients": "Russian, Chips, Vienna",
+      "prodImage": "image",
+      "prodPrice": "85"
+    }
+  ],
+  "ingredients": [
+    {
+      "ingrName": "Special",
+      "ingrCost": 1.5,
+      "ingrQuantity": 150,
+      "ingrTotalCost": 225,
+      "id": "8099"
+    }
+  ]
+}

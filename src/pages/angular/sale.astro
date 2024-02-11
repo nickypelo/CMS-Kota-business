@@ -1,0 +1,10 @@
+---
+import DashboardLayout from "../../layout/DashboardLayout.astro";
+import {SaleComponent} from "../../components/angular/sale/sale.component";
+---
+
+<DashboardLayout>
+    <section>
+        <SaleComponent client:load/>
+    </section>
+</DashboardLayout>

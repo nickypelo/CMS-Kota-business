@@ -15,26 +15,26 @@
             <th class="w-1/6">Total Cost (R)</th>
         </thead>
         <tbody>
-            <tr class="h-14 border-b-2 text-center {{lebitso}} w-full relative">
-                <td class="border-r-2"><input class="w-full h-8 text-center p-2" type="text" readonly value="{{ingredients.length + 1}}"></td>
-                <td class="border-r-2"><input class="w-full h-8 p-2" type="text"></td>
-                <td class="border-r-2"><input class="w-full h-8 p-2" type="text"></td>
-                <td class="border-r-2"><input class="w-full h-8 p-2" type="text"></td>
-                <td class=""><input class="w-full h-8 p-2" type="text"></td>
-                <button class="absolute top-10 right-1 bg-red-500 text-white py-1 px-2" (click)="addIngredient()">Complete</button>
-            </tr>
             @for (item of ingredients; track $index) {
                 <tr class="h-12 border-b-2 text-center">
-                    <td class="border-r-2 text-left"><button class=" px-2 py-1 mr-8 bg-red-500 text-white hover:bg-yellow-300 hover:text-black" (click)="deleteIngredient($index)">Remove</button>
+                    <td class="border-r-2 text-left"><button class=" px-2 py-1 mr-8 bg-red-500 text-white hover:bg-yellow-300 hover:text-black" (click)="deleteIngredient(item.id)">Remove</button>
                         {{$index + 1}} </td>
                     <td class="border-r-2">{{item.ingrName}}</td>
                     <td class="border-r-2">{{item.ingrCost}}</td>
                     <td class="border-r-2">{{item.ingrQuantity}}</td>
-                    <td>{{item.ingrTotalCost(item.ingrCost, item.ingrQuantity)}}</td>
+                    <td>{{item.ingrTotalCost}}</td>
                 </tr>
             }
-            
-            
         </tbody>
     </table>
+    <form action="" [formGroup]="ingredientForm" (ngSubmit)="onSubmit()" class="{{dialogBox}}">
+        <div class="h-14 border-b-2 text-center w-full relative flex">
+            <div class="border-r-2 w-1/6"><input class="w-full h-8 text-center p-2" type="text" readonly value="{{ingredients.length + 1}}"></div>
+            <div class="border-r-2 w-2/6"><input class="w-full h-8 p-2" type="text" formControlName="ingrNameControl"></div>
+            <div class="border-r-2 w-1/6"><input class="w-full h-8 p-2" type="text" formControlName="ingrCostControl"></div>
+            <div class="border-r-2 w-1/6"><input class="w-full h-8 p-2" type="text" formControlName="ingrQuantityControl"></div>
+            <div class="w-1/6"><input class="w-full h-8 p-2" type="text" formControlName="ingrTotalCostControl" readonly value="{{(ingredientForm.value?.ingrCostControl * ingredientForm.value?.ingrQuantityControl) ?? 0}}"></div>
+            <button class="absolute top-10 right-1 bg-red-500 text-white py-1 px-2" type="submit">Complete</button>
+        </div>
+    </form>
 </section>
